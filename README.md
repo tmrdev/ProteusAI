@@ -41,6 +41,7 @@ An AI security bot for checking logs, sniffing packets and assisting the develop
 - need to look into running the bot inside Docker on Linux and utillizing Apple Containers on macOS
 - is there a more lightweight solution on Linux that can replace Docker?
 - Support for sniffing packets will not be easy but start out with small pcaps or similar
+- Two Main Modes for Sniffing: 1) Dev mode to aid in debugging network connections 2) Security Bot detecting anomalies and hacks
 - AI will need to save State across the board, especially when analzying network traffic
 - Network Anomalies will be revealed over time, false positves will spring up so a labeling system with weights will be needed (research!)
 - Priority is to get this working on Linux and macOS, with a possible release on Windows that leverages the Linux Sub-System
