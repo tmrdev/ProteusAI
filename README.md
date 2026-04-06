@@ -1,5 +1,41 @@
-# ProteusAI
+# Command executed in Terminal for connecting to ollama models
+# SSH Tunnel With Forwarding To ollama at port 11434
+# autossh -M 0 -v -N -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 11434:localhost:11434 username@domain.com
+
+# ProteusAI - may change to GIAS (Ghost In A Shell) or GITS (Ghost In The Shell)
 An AI security bot for checking logs, sniffing packets and assisting the development process. AI Anomaly detection.
+
+# Getting Setup
+- __Verify requirements.txt exists__
+
+  ```bash
+  ls requirements.txt
+  ```
+
+- __Create virtual environment__
+
+  ```bash
+  python3 -m venv venv
+  ```
+
+- __Activate virtual environment__
+
+  ```bash
+  source venv/bin/activate
+  ```
+
+- __Install dependencies from requirements.txt__
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- __Deactivate virtual environment__
+
+  ```bash
+  deactivate
+  ```
+
 
 # This is a proof of concept that needs many things to be mapped out
 - need to look into running the bot inside Docker on Linux and utillizing Apple Containers on macOS

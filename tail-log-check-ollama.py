@@ -1,3 +1,4 @@
+import json
 import queue
 import requests
 # there is an official ollama library but using Requests for now as an example
@@ -23,6 +24,7 @@ def pyTail(filename, n=20):
 def analyze_with_ai(log_lines):
     # getting dropped connection at ssh tunnel/forwarder, look into autossh or similar but VPN Cloud is better
     url = "http://localhost:11434/api/generate"
+    # need a way to switch between AI models like llama3, qwen, mistral, etc...
     data = {
       "model": "llama3",
       "prompt": "Analyze these log files for the terminal app called Warp, running on macOS Sonoma: ".join(log_lines),
@@ -46,4 +48,5 @@ if __name__ == "__main__":
     # Use print with f so that \n characters turn into line breaks
     # This should be readable in the Terminal (shell)
     # print(f"{result['response']}\n\n")
-    print(f"{result}\n\n")
+    print(f"{result['response']}\n\n")
+    # print(json.dumps(result, indent=4))
