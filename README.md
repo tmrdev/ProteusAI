@@ -1,11 +1,26 @@
 # Command executed in Terminal for connecting to ollama models
 # SSH Tunnel With Forwarding To ollama at port 11434
+# SSH Tunnels should be temporary and only used to quickly test an AI API endpoint
 # autossh -M 0 -v -N -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 11434:localhost:11434 username@domain.com
 
-# ProteusAI - may change to GIAS (Ghost In A Shell) or GITS (Ghost In The Shell)
+# ProteusAI - will change to GIAS (Ghost In A Shell) or GITS (Ghost In The Shell)
 An AI security bot for checking logs, sniffing packets and assisting the development process. AI Anomaly detection.
 
-# Getting Setup
+# WireGuard - VPN is now being used for interfaceing with open source AI models like gemma, hermes, jarvis
+# All AI infrastructure should be inside a VPN Cloud, this will evolve in the future, the future is encrypted private networks, meshed, multi-levels
+
+# Working on an update for sniffing network traffic, there will be multiple ways to sniff traffic
+
+# For now it will be: 
+
+1) Saving PCAP files and then parsing them out to CSV / JSON and other methods and analzying
+
+2) Live MCP Server which will be more complicated and intense, so the first method will be easy to implement as a starting point
+
+3) Will need dedicated workstations / servers analyzing network traffic, which requires massive amounts of storage
+
+4) Need to focus on how AI Agents play their role, may need as many as 10 agents or more, starting out simple and scaling up
+
 - __Verify requirements.txt exists__
 
   ```bash
